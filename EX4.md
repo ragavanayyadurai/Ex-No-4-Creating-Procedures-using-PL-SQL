@@ -1,5 +1,5 @@
 # Ex. No: 4 Creating Procedures using PL/SQL
-
+## Date: 25/9/23
 ### AIM: To create a procedure using PL/SQL.
 
 ### Steps:
@@ -21,11 +21,11 @@ SQL> CREATE TABLE ep(
 CREATE OR REPLACE PROCEDURE emp_data AS
     BEGIN
     INSERT INTO ep(empid,empname,dept,salary)
-    values(1,'SHAKTHI','MD',10000000);
+    values(1,'ABISHEK','MD',10000000);
     INSERT INTO ep(empid,empname,dept,salary)
-    values(2,'ARUN','HR',500000);
+    values(2,'DEVA','HR',500000);
     INSERT INTO ep(empid,empname,dept,salary)
-    values(3,'DHANUSH','IT',200000);
+    values(3,'RAGAV','IT',200000);
     COMMIT;
    FOR emp_rec IN (SELECT * FROM ep)LOOP
    DBMS_OUTPUT.PUT_LINE('EMPLOYEE ID:'||emp_rec.empid||',EMPLOYEE NAME:'|| emp_rec.empname||
